@@ -1,48 +1,77 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@include file="/WEB-INF/views/template/header.jsp"%>
+<%@include file="/WEB-INF/views/header.jsp"%>
 
-<script>
-   
-   $(document).ready(function(){
-        var searchCondition = '${searchCondition}';
+<br><br>
+<br><br>
 
-        $('.table').DataTable({
-           /*  "lengthMenu": [[1,2,3,5,10,-1], [1,2,3,5,10, "All"]],
-            */  scrollY:        '50vh',
-            scrollCollapse: true,
-            "paging":   false,
-             "oSearch": {"sSearch": searchCondition,
-            	 			"hidden":true}
-             
-        });
-    });
-
-</script>
-
-
-<div class="container-wrapper">
-    <div class="container">
-        <div class="page-header">
-            <h3>All Posts</h3>
+<div style=" margin:auto;
+               				 border-radius: 50px;
+						    border: 1px solid #73AD21;
+						    padding: 10px;
+						    width: 20%;
+						     background:#C0C0C0;
+						    color:black;
+						    /* opacity:0.5; */
+						    border-style:solid;
+						    border-color:transparent;">
+                <h3>All Posts</h3>
 	   </div>
-
-        <table class="table table-striped table-hover" >
-            <thead>
-            <tr class="bg-success">
-                <th>Post Title</th>
-                <th>Post Message</th>
-                <th>Posted by</th>
-                <th>Post Time</th>
-             </tr>
-            </thead>
-            <c:forEach items="${userPost}" var="userpost">
-                <tr>
-                    <td>${userpost.posttitle}</td>
-                    <td>${userpost.postmessage}</td>
-                    <td>${userpost.username}</td>
-                    <td>${userpost.postdate}</td>
-                </tr>
+<br>
+<hr style=" display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 4px;
+border-color:#00f6ff;
+width:90%;">
+<br>
+	   
+        <!-- <div style="          margin:auto;
+               				 border-radius: 25px;
+						    border: 5px solid #73AD21;
+						    padding: 20px;
+						    width: 90%;
+						    overflow:scroll; 
+						    height:400px;
+						     background:black;
+						    color:#00f6ff;
+						    border-style:solid;
+						    border-color:green;">
+        -->       
+           
+	    <c:forEach items="${userPost}" var="userpost">
+               <div style=" float:left;
+               				 border-radius: 50%;
+						    border: 1px solid #73AD21;
+						    padding: 20px;
+						    width: 8%;
+						     background:#C0C0C0;
+						    color:black;
+						    /* opacity:0.5; */
+						    border-style:solid;
+						    border-color:transparent;">
+                   <p>${userpost.username}</p>
+         </div>
+         <div style=" float:clear;
+         margin:-10px;
+               				 border-radius: 50px;
+						    border: 1px solid #73AD21;
+						    padding: 20px;
+						    width: 70%;
+						     background:#00f6ff;
+						    color:black;
+						    /* opacity:0.5; */
+						    border-style:solid;
+						    border-color:transparent;">
+                    
+                    <p>${userpost.postmessage}</p>
+                   
+           </div><br>
             </c:forEach>
-        </table>
+ 
+         
+      
 

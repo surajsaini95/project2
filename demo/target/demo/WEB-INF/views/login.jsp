@@ -1,4 +1,4 @@
-<%@include file="/WEB-INF/views/template/header.jsp" %>
+<%@include file="/WEB-INF/views/header.jsp" %>
 
 
 <div class="container-wrapper">
@@ -17,7 +17,7 @@
                 </c:if>
                 <div class="form-group">
                     <label for="username">User: </label>
-                    <input type="text" id="username" name="username" class="form-control" />
+                    <input type="text" id="username" name="username" class="form-control" autofocus/>
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>

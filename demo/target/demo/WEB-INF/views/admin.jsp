@@ -1,4 +1,4 @@
-<%@include file="/WEB-INF/views/template/header.jsp"%>
+<%@include file="/WEB-INF/views/header.jsp"%>
 
 <div class="container-wrapper">
     <div class="container">

@@ -33,6 +33,16 @@ public class HomeController {
 	        return "home";
 	    }
 		
+	 @RequestMapping("/chat")
+	    public String showchat() {
+	        return "chat";
+	    }
+	 
+	 @RequestMapping("/newchatroom")
+	    public String shownewchatroom() {
+	        return "newchatroom";
+	    }
+		
 	@RequestMapping("/admin")
     public String adminpage() {
         return "admin";
@@ -80,12 +90,13 @@ public class HomeController {
     }
 	
 	@RequestMapping("/deletemy/{id}")
-    public String deletemyPost(@PathVariable int id, Model model, HttpServletRequest request) {
-        
+    public void deletemyPost(@PathVariable int id, Model model, HttpServletRequest request) {
+		System.out.print("\n\n\n\n\n date \n\n\n");
+    	
         UserPost userPost = userPostService.getUserPostById(id);
         userPostService.deleteUserPost(userPost);
 
-        return "redirect:/myposts";
+       
     }
 	
     @RequestMapping("/addpost")

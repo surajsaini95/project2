@@ -22,7 +22,8 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframew
         <property name="suffix" value=".jsp" />
     </bean>
 
-    <mvc:resources mapping="/resources/**" location="/WEB-INF/resources/" />
+    <mvc:resources mapping="/resources/**" location="/WEB-INF/resources/,/resources/" />
+
 
     <tx:annotation-driven />
 
