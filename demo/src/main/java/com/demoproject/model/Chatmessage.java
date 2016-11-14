@@ -16,8 +16,16 @@ public class Chatmessage {
 	@GeneratedValue
 	private int id;
 
-	private int userid;
+	private String user;
 	
+	public String getUser() {
+		return user;
+	}
+
+	public void setUser(String user) {
+		this.user = user;
+	}
+
 	private String message;
 
 	@Column(name = "added_date")
@@ -64,13 +72,6 @@ public class Chatmessage {
 		return message;
 	}
 
-	public int getUserid() {
-		return userid;
-	}
-
-	public void setUserid(int userid) {
-		this.userid = userid;
-	}
 	
 	
 

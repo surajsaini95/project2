@@ -36,10 +36,11 @@ public class ChatroomService {
 		chatRoomDAOImpl.save(chatroom);
 	}
 
-	public void saveChatMessage(Chatmessage chatMessage, int id) {
+	public void saveChatMessage(Chatmessage chatMessage, int id,String user) {
 		Chatroom chatroom = chatRoomDAOImpl.single(id);
 		chatMessage.setChatroom(chatroom);
 		chatMessage.setAddedDate(new Date());
+		chatMessage.setUser(user);
 		chatRoomDAOImpl.saveMessage(chatMessage);
 	}
 

@@ -58,7 +58,7 @@ public class ChatroomController {
 
 	@RequestMapping("/detail")
 	public String mm(Model model,@RequestParam int id) {
-		System.out.println("inside @RequestMapping(/detail/{id})");
+		System.out.println("inside @RequestMapping(/detail/)");
 		Chatroom chatroom=chatRoomService.getChatroom(id);
 		model.addAttribute("chatroom", chatroom);
 		return "detail";
@@ -109,11 +109,12 @@ public class ChatroomController {
 	}
 
 	@RequestMapping(value = "/detail", method = RequestMethod.POST)
-	public String saveMessage(@RequestParam String message, @RequestParam int id,Model m) {
-		System.out.println("inside /detail with post");
+	public String saveMessage(@RequestParam String message, @RequestParam int id,@RequestParam String user,Model m) {
+		System.out.println("inside /detail hi");
 		Chatmessage chatMessage = new Chatmessage();
 		chatMessage.setMessage(message);
-		chatRoomService.saveChatMessage(chatMessage, id);
+		chatMessage.setUser(user);
+		chatRoomService.saveChatMessage(chatMessage, id,user);
 		 //List list = (List) m.asMap().get("list");
 		 //m.addAttribute("list", list);
 		return "redirect:/chatroom/detail?id=" + id;

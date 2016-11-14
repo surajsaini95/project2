@@ -5,7 +5,7 @@
 <br><br>
 <br><br>
 
-<div style=" margin:auto;
+<div style=" 
                				 border-radius: 50px;
 						    border: 1px solid #73AD21;
 						    padding: 10px;
@@ -15,7 +15,7 @@
 						    /* opacity:0.5; */
 						    border-style:solid;
 						    border-color:transparent;">
-                <h3>All Posts</h3>
+                <h2 align="center">All Posts</h2>
 	   </div>
 <br>
 <hr style=" display: block;
@@ -26,9 +26,37 @@
     border-style: inset;
     border-width: 4px;
 border-color:#00f6ff;
-width:90%;">
+width:100%;">
 <br>
 	   
+	    <div style=" float:left;
+               				 border-radius: 50px;
+						    border: 1px solid #73AD21;
+						    padding: 10px;
+						    width: 12%;
+						     background:#C0C0C0;
+						    color:black;
+						    /* opacity:0.5; */
+						    border-style:solid;
+						    border-color:transparent;">
+                  <h3 align="center"><b>Posted By</b></h3>
+         </div>
+         <div style=" float:clear;
+        					 display:inline-block;
+        					
+               				 border-radius: 50px;
+						    border: 1px solid #73AD21;
+						    padding: 20px;
+						    width: 70%;
+						     background:#00f6ff;
+						    color:black;
+						    /* opacity:0.5; */
+						    border-style:solid;
+						    border-color:transparent;">
+                    
+                    <h3 align="center"><b>Post Content</b></h3>
+                   
+           </div><br><br>
         <!-- <div style="          margin:auto;
                				 border-radius: 25px;
 						    border: 5px solid #73AD21;
@@ -44,19 +72,20 @@ width:90%;">
            
 	    <c:forEach items="${userPost}" var="userpost">
                <div style=" float:left;
-               				 border-radius: 50%;
+               				 border-radius: 50px;
 						    border: 1px solid #73AD21;
 						    padding: 20px;
-						    width: 8%;
+						    width: 12%;
 						     background:#C0C0C0;
 						    color:black;
 						    /* opacity:0.5; */
 						    border-style:solid;
 						    border-color:transparent;">
-                   <p>${userpost.username}</p>
+                   <p align="center">${userpost.username}</p>
          </div>
          <div style=" float:clear;
-         margin:-10px;
+        					 display:inline-block;
+        					
                				 border-radius: 50px;
 						    border: 1px solid #73AD21;
 						    padding: 20px;
@@ -67,9 +96,9 @@ width:90%;">
 						    border-style:solid;
 						    border-color:transparent;">
                     
-                    <p>${userpost.postmessage}</p>
+                    <p>Title : ${userpost.posttitle}<br>Message : ${userpost.postmessage}<br>Posted On :${userpost.postdate}</p>
                    
-           </div><br>
+           </div><br><br>
             </c:forEach>
  
          

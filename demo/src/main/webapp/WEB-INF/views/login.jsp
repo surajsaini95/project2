@@ -7,7 +7,7 @@
                				 border-radius: 50%;
 						    border: 1px solid #73AD21;
 						    padding: 20px;
-						    width: 11%;
+						    width: 10%;
 						     background:#00f6ff;
 						     		    color:black;
 						    /* opacity:0.5; */

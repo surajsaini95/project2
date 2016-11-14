@@ -37,6 +37,10 @@ public class HomeController {
 	    public String showchat() {
 	        return "chat";
 	    }
+	 @RequestMapping("/try")
+	    public String showtry() {
+	        return "try";
+	    }
 	 
 	 @RequestMapping("/newchatroom")
 	    public String shownewchatroom() {

@@ -18,7 +18,7 @@ div.shadow:hover {
 	}
 </style>
 <br>
-<div class="shadow" style=" margin:auto;
+<div class="jumbotron" style=" margin:auto;
                				 border-radius: 50px;
 						    border: 1px solid #73AD21;
 						    padding: 20px;
@@ -40,7 +40,7 @@ div.shadow:hover {
 						    padding: 20px;
 						    width: 50%;
 						     background:#00f6ff;
-						    color:black;
+						    color:#052559;
 						    /* opacity:0.5; */
 						    border-style:solid;
 						    border-color:transparent;
