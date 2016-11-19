@@ -31,7 +31,7 @@ width:100%;">
 <br>
 	   
 	
-	<div ng-controller = "postCtrl">
+	<div ng-app="postApp" ng-controller = "postCtrl">
       <c:forEach items="${userPost}" var="userpost">
                   
                   <c:if test="${pageContext.request.userPrincipal.name  == userpost.username}">

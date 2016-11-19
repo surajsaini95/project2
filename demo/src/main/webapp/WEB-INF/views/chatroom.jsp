@@ -79,7 +79,20 @@
                     
                                 
            </div><br>
-           
+       <a href="<c:url value="/chatroom/list.html" />"><div class="jumbotron" style=" margin:auto;
+               				 border-radius: 50px;
+						    border: 1px solid #73AD21;
+						    padding: 20px;
+						    width: 50%;
+						     background:#00f6ff;
+						    color:black;
+						    /* opacity:0.5; */
+						    border-style:solid;
+						    border-color:transparent;
+						   ">
+<h4><center>Go back to the list........</center></h4>
+</div>
+</a>    
 
 
 <script type="text/javascript">

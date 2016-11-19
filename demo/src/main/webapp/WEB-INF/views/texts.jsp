@@ -118,9 +118,13 @@ margin:auto;
 	};
 
 	$(document).ready(function() {
-		 repeatme();  
+	 repeatme();  
 		/* $route.reload(); */
-		$interval(repeatme,1000); 
+		/*$interval(repeatme,1000);  */
+		setInterval(function(){
+			repeatme()
+		},1000);
+		
 	}); 
 	
 	setTimeout("repeatme();",1000);
